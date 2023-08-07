@@ -1,0 +1,24 @@
+.cali{
+    margin-top: 10px;
+    background-color: aqua;
+    padding: 10px 30px;
+}
+.ok{
+
+   margin-bottom: 10px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+
+input{
+    padding: 10px;
+}

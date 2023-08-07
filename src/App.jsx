@@ -1,15 +1,16 @@
-export const App = function (props){
+ const App = function (props){
     return <h1>Hello word isbadal cusub{props.user}</h1>;
 }
+export default App;
 
 export const Save = function(){
     return (<>
     <div>
-        <div style={{backgroundCoor:"blue"}}>
+        <div style={{backgroundColor:"blue",display:"flex",justifyContent:"space-between"}}>
         <h1>Cabdirisaq</h1>
-        <nav>
-            <ul>
-                <li><a href="#"></a>Home</li>
+        <nav >
+            <ul style={{display:"flex",justifyContent:"space-between",gap:"100"}}>
+                <li ><a style={{color:"white",textDecoration:"none"}}  href="#">Home</a></li>
                 <li><a href="#"></a>Contact Us</li>
                 <li><a href="#"></a>About Us</li>
                 <li><a href="#"></a>more</li>

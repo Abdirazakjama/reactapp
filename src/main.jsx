@@ -1,34 +1,75 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {Save} from "./App"
+import './Index.css'
+import App from "./App"
+import { useState } from 'react'
 
 
-// const year = 30
-// const Kill = ()=>{
-//   return(<>
-//   <h1 style={{color:"skyblue"}}>welcome{year}</h1>
-//   <h1>To React developr{6+6}</h1>
-//   </>) 
-// }
 
-// const Layout = (props)=>{
-//   return <div style={{backgroundColor:"red"}}> 
-//     {props.children}
-//   </div>
-// }
+
+
+const Yes = ()=>{
+ 
+ 
+  
+
+  const [Age,setAge] = useState("")
+  const [name,setName] = useState("")
+
+  const [loadAge,setLoadAge] = useState("")
+  const [loadName,setLoadName] = useState("")
+
+ 
+
+  const paragraphContent = () =>{
+    setLoadAge(Age === "" ? "please enter your age" : Age > 18 ? `your Age is ${Age} is over 18` : `your age ${Age}  under 18 ` )
+
+    setLoadName(name === "" ? "enter your name": `your name is ${name}`)
+  }
+
+
+const getName = (event) =>{
+    setName(event.target.value)
+  }
+
+  const getAge = (event) =>{
+    setAge(event.target.value)
+  }
+  
+
+  return (
+    <>
+
+  <div className='flex'>
+  <input className='ok' type='text' placeholder='enter your name' onChange={getName} />
+  <input type='number' placeholder='enter age' onChange={getAge} />
+
+   
+   <button className='cali' onClick={paragraphContent}>click</button>
+   <p>{loadAge}  {loadName}</p>
+  </div>
+    
+</>
+ 
+  );
+   
+  
+}
+
+
+
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
  
-  {/* <App user="eng ABDIRISAQ"/>
-  <Wow id="1"/>
-  <Save />
-  <ArrowFunction />
-  <Greating />
-  <Sool username="jamac ciid"/>
-  <Kill /> */
-  <Save />
-  }
+  
+  
+<Yes />
+    
+  
+  
  
   </React.StrictMode>,
 )
